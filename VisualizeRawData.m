@@ -22,9 +22,9 @@ figure;
 set(gcf, 'name', 'TEST DATA')
 for i = (1+factor):(range+factor)
     filename = strcat('image_', num2str(i));
-    im = dicomread(filename);
+    im1 = dicomread(filename);
     subplot(row, col, i);
-    imshow(im,[]);
+    imshow(im1,[]);
 end
 
 % Visualizing train data (labeled)
@@ -33,7 +33,7 @@ figure;
 set(gcf, 'name', 'TEST DATA')
 for i = (1+factor):(range+factor)
     filename = strcat('image_', num2str(i));
-    im = dicomread(filename);
+    im2 = dicomread(filename);
     subplot(row, col, i);
-    imshow(im,[]);
+    imshow(im2,[]);
 end
