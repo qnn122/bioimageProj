@@ -35,9 +35,7 @@ if use_bwlabel
         end
     end
     L1 = label2rgb(L);
-end 
-figure;
-subplot(2,2,1); imshow(im,[]); title('DATA');
+end
 subplot(2,2,2); imshow(label); title('LABEL');
 subplot(2,2,3); imshow(out); title('After THRESHOLDING');
 subplot(2,2,4); imshow(out2); title('After CLOSING and OPENING');
@@ -53,6 +51,6 @@ else
     correlation = 100*corr2(label,out2)
 end
 
-% NOTE: USING BWLABEL DO NOT IMPROVE THE ACCURACY, IN FACT, IT LOWERS
+% NOTE: USING BWLABEL DOES NOT IMPROVE THE ACCURACY, IN FACT, IT EVEN LOWERS
 % ACCURACY
 
